@@ -2,6 +2,8 @@
 
 This is a Flask application that allows users to interact with a machine learning model for fake news detection via POST requests. The app is deployed on AWS Elastic Beanstalk, making the model accessible as a service through a RESTful API.
 
+For lab grading purposes, a .csv file of latency test results (100 requests per test case) has been included.
+
 ## Features
 - **Machine Learning Integration**: The app uses a trained model to classify news articles as "real" or "fake" based on their content.
 - **RESTful API**: Users can send POST requests to the `/predict` endpoint to receive predictions.

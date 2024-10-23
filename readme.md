@@ -28,5 +28,6 @@ POST http://ece444-pra5-app-environment.eba-3c2rf3gh.us-east-2.elasticbeanstalk.
 ```
 
 ## API Latency Measurements
+For more information on what test cases have been used, see `latency_test.py`
 ![API Latency](https://github.com/achuthanmukundan00/E444-F2024-PRA5/blob/master/boxplot.png)
 

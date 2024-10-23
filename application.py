@@ -3,7 +3,7 @@ import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 # Function to load the model and vectorizer
@@ -15,12 +15,12 @@ def load_model():
         vectorizer = pickle.load(vd)
 
 
-# Load the model on app startup
+# Load the model on application startup
 load_model()
 
 
 # Define a route to predict fake news
-@app.route('/predict', methods=['POST'])
+@application.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()  # Get JSON data
     print(f"Received request data: {data}")  # Debug: print received data
@@ -40,6 +40,6 @@ def predict():
     return jsonify({'prediction': result})
 
 
-# Main entry point for the app
+# Main entry point for the application
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    application.run(host='0.0.0.0', port=5000)
